@@ -26,7 +26,7 @@ BCWALLET_PRIVPIPE_CAT_EXPLANATION = "If you moved your seed to a file, you could
 BCWALLET_PIPE_ENCRYPTION_EXPLANATION = 'Even better, encrypt that file using gpg or opensll.'
 
 EXPLAINER_COPY = [
-        ['Multi-Currency', 'Supports Bitcoin (and Testnet), Litecoin, Dogecoin, and BlockCypher Testnet.'],
+        ['Multi-Currency', 'Supports Bitcoin (and Testnet), BitCore, Litecoin, Dogecoin, and BlockCypher Testnet.'],
         ['Nearly Trustless', 'Keys and signatures are generated locally for trustless use.'],
         ['No Key Pool', 'The seed is not stored locally, the app is booted with the user supplying the master key so the filesystem is never used.'],
         ['Hard to Mess Up', "As long as you don't lose or share your master private key, everything else is simple."],

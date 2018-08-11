@@ -1,5 +1,6 @@
 from bitmerchant.network import BitcoinMainNet
 from bitmerchant.network import BitcoinTestNet
+from bitmerchant.network import BitcoreMainNet
 from bitmerchant.network import LitecoinMainNet
 from bitmerchant.network import DogecoinMainNet
 from bitmerchant.network import BlockCypherTestNet
@@ -13,7 +14,8 @@ from blockcypher.utils import is_valid_coin_symbol, is_valid_hash, coin_symbol_f
 COIN_SYMBOL_TO_BMERCHANT_NETWORK = {
         'btc': BitcoinMainNet,
         'btc-testnet': BitcoinTestNet,
-        'ltc': LitecoinMainNet,
+        'btx': BitcoreMainNet
+	'ltc': LitecoinMainNet,
         'doge': DogecoinMainNet,
         'bcy': BlockCypherTestNet,
         }

@@ -19,7 +19,7 @@ setup(
             ],
         entry_points='''
             [console_scripts]
-            'bcwallet-btx=bcwallet-btx:invoke_cli'
+            bcwallet-btx=bcwallet_btx:invoke_cli
         ''',
         packages=['bcwallet-btx'],
         )

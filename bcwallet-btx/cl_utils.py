@@ -372,12 +372,12 @@ def print_traversal_warning():
     puts("There are over a billion keys (and corresponding addresses) that can easily be derived from your master key, but that doesn't mean BlockCypher will automatically detect a transaction sent to any one of them.")
     puts("By default, BlockCypher will look 10 addresses ahead of the latest transaction (or requested receiving address) on each subchain.")
     puts("For example, if the transaction that has traversed furthest on the change address chain is at m/0/5, then BlockCypher will automatically detect any transactions sent to m/0/0-m/0/15.")
-    puts("For normal bcwallet users you never have to think about this, but if you're in this section manually traversing keys then it's essential to understand.")
-    puts("This feature should primarily be considered a last resource to migrate away from bcwallet if BlockCypher is down.")
+    puts("For normal bcwallet-btx users you never have to think about this, but if you're in this section manually traversing keys then it's essential to understand.")
+    puts("This feature should primarily be considered a last resource to migrate away from bcwallet-btx if BlockCypher is down.")
 
 
 def print_keys_not_saved():
     puts()
     puts(colored.green('User private keys intentionally never saved.'))
-    puts(colored.green('Please do not lose your seed, bcwallet intentionally has no backup!'))
+    puts(colored.green('Please do not lose your seed, bcwallet-btx intentionally has no backup!'))
     puts()

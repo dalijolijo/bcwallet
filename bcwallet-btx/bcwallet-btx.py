@@ -1380,6 +1380,6 @@ def invoke_cli():
 if __name__ == '__main__':
     '''
     For invocation like this (not tested):
-    python bcwallet.py
+    python bcwallet-btx.py
     '''
     invoke_cli()

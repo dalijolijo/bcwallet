@@ -336,7 +336,7 @@ def print_bcwallet_basic_pub_opening(mpub):
     puts("You've opened your HD wallet in PRIVATE key mode, so you CAN sign transactions.")
     puts("If you like, you can always open your HD wallet in PUBLIC key mode like this:\n")
     with indent(2):
-        puts(colored.magenta('$ bcwallet --wallet=%s\n' % mpub))
+        puts(colored.magenta('$ bcwallet-btx --wallet=%s\n' % mpub))
 
 
 def print_pubwallet_notice(mpub):
@@ -348,17 +348,17 @@ def print_pubwallet_notice(mpub):
 
 def print_bcwallet_basic_priv_opening(priv_to_display):
     with indent(4):
-        puts(colored.magenta('$ bcwallet --wallet=%s\n' % priv_to_display))
+        puts(colored.magenta('$ bcwallet-btx --wallet=%s\n' % priv_to_display))
 
 
 def print_bcwallet_piped_priv_opening(priv_to_display):
     with indent(4):
-        puts(colored.magenta('$ echo %s | bcwallet\n' % priv_to_display))
+        puts(colored.magenta('$ echo %s | bcwallet-btx\n' % priv_to_display))
 
 
 def print_bcwallet_piped_priv_cat_opening():
     with indent(4):
-        puts(colored.magenta('$ cat wallet_seed.txt | bcwallet\n'))
+        puts(colored.magenta('$ cat wallet_seed.txt | bcwallet-btx\n'))
 
 
 def print_childprivkey_warning():

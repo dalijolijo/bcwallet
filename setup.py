@@ -4,14 +4,14 @@ from setuptools import setup
 
 setup(
         name='bcwallet-btx',
-        version='1.2.10',
+        version='1.2.11',
         description='Simple BIP32 HD cryptocurrecy command line wallet',
         author='David Bergen',
         author_email='david.bergen@gmx.net',
         url='https://github.com/dalijolijo/bcwallet-btx/',
         py_modules=['bcwallet-btx'],
-        install_requires=[
-            'python==2.7.3',
+        python_requires='>2.7',
+	install_requires=[
             'clint==0.4.1',
             'blockcypher==1.0.69',
             'bitmerchant-btx==0.1.9',

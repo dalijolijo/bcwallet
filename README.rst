@@ -1,4 +1,4 @@
-bcwallet with BitCore support (bcwallet-btx)
+bcwallet with BitCore support (bcwalletx)
 ============================================
 
 Use at your own risk. We recommend starting with BlockCypher testnet coins (`free faucet here <https://accounts.blockcypher.com/blockcypher-faucet>`_).
@@ -10,14 +10,14 @@ To get started:
 
 .. code-block:: bash
 
-    pip install bcwallet-btx
-    bcwallet-btx
+    pip install bcwalletx
+    bcwalletx
 
 (then follow the instructions on the screen)
 
 If you don't have `pip` pre-installed on your machine you can `install pip here <http://pip.readthedocs.org/en/stable/installing/>`_. If for some reason `pip` doesn't work you can use `easy_install`, but `you really shouldn't do that <http://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install>`_.
 
-Note that if you use an outdated version of pip you may get a scary ``InsecurePlatformWarning`` warning installing any package (including ``bcwallet-btx``). As always, you should upgrade your pip to the latest version before installing any new software:
+Note that if you use an outdated version of pip you may get a scary ``InsecurePlatformWarning`` warning installing any package (including ``bcwalletx``). As always, you should upgrade your pip to the latest version before installing any new software:
 
 .. code-block:: bash
 
@@ -105,7 +105,7 @@ So sad to see you go! Just enter the following and be on your way:
 
 .. code-block:: bash
 
-    pip uninstall bcwallet-btx
+    pip uninstall bcwalletx
 
 (then confirm your uninstallation at the prompt)
 

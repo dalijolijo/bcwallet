@@ -672,7 +672,7 @@ def generate_offline_tx(wallet_obj):
 def sign_tx_offline(wallet_obj):
 
     if wallet_obj.private_key is None:
-        puts(colored.red("bcwallet-btx was booted using a master PUBLIC key %s so it cannot sign transactions.\nPlease load bcwallet-btx with your master PRIVATE key like this:"))
+        puts(colored.red("bcwalletx was booted using a master PUBLIC key %s so it cannot sign transactions.\nPlease load bcwalletx with your master PRIVATE key like this:"))
         priv_to_display = '%s123...' % first4mprv_from_mpub(
                 mpub=wallet_obj.serialize_b58(private=False))
         print_bcwallet_basic_priv_opening(priv_to_display=priv_to_display)
@@ -885,7 +885,7 @@ def dump_all_keys_or_addrs(wallet_obj):
     else:
         desc_str = 'addresses'
         puts('Displaying Public Addresses Only')
-        puts('For Private Keys, please open bcwallet-btx with your Master Private Key:\n')
+        puts('For Private Keys, please open bcwalletx with your Master Private Key:\n')
         priv_to_display = '%s123...' % first4mprv_from_mpub(mpub=mpub)
         print_bcwallet_basic_priv_opening(priv_to_display=priv_to_display)
 
@@ -955,7 +955,7 @@ def dump_selected_keys_or_addrs(wallet_obj, used=None, zero_balance=None):
 
     if wallet_obj.private_key is None:
         puts('Displaying Public Addresses Only')
-        puts('For Private Keys, please open bcwallet-btx with your Master Private Key:\n')
+        puts('For Private Keys, please open bcwalletx with your Master Private Key:\n')
         priv_to_display = '%s123...' % first4mprv_from_mpub(mpub=mpub)
 
         print_bcwallet_basic_priv_opening(priv_to_display=priv_to_display)
@@ -1065,7 +1065,7 @@ def send_chooser(wallet_obj):
         puts("(since you are NOT connected to BlockCypher, many choices are disabled)")
     with indent(2):
         puts(colored.cyan('1: Basic send (generate transaction, sign, & broadcast)'))
-        puts(colored.cyan('2: Sweep funds into bcwallet-btx from a private key you hold'))
+        puts(colored.cyan('2: Sweep funds into bcwalletx from a private key you hold'))
         puts(colored.cyan('3: Offline transaction signing (more here)'))
         puts(colored.cyan('\nb: Go Back\n'))
 
@@ -1149,7 +1149,7 @@ def wallet_home(wallet_obj):
             else:
                 puts(colored.cyan('0: Dump addresses (advanced users only)'))
 
-            puts(colored.cyan('\nq: Quit bcwallet-btx\n'))
+            puts(colored.cyan('\nq: Quit bcwalletx\n'))
 
         choice = choice_prompt(
                 user_prompt=DEFAULT_PROMPT,
@@ -1160,7 +1160,7 @@ def wallet_home(wallet_obj):
         verbose_print('Choice: %s' % choice)
 
         if choice is False:
-            puts(colored.green('Thanks for using bcwallet-btx!'))
+            puts(colored.green('Thanks for using bcwalletx!'))
             print_keys_not_saved()
             break
         elif choice == '1':
@@ -1190,7 +1190,7 @@ def cli():
             )
     parser.add_argument('-b', '--bc-api-key',
             dest='bc_api_key',
-            # For all bcwallet-btx users:
+            # For all bcwalletx users:
             default='9c339f92713518492a4504c273d1d9f9',
             help='BlockCypher API Key to use. If not supplied the default will be used.',
             )
@@ -1217,7 +1217,7 @@ def cli():
     UNIT_CHOICE = args.units
 
     if args.version:
-        puts(colored.green(str(pkg_resources.get_distribution("bcwallet-btx"))))
+        puts(colored.green(str(pkg_resources.get_distribution("bcwalletx"))))
         puts()
         sys.exit()
 
@@ -1239,9 +1239,9 @@ def cli():
             puts(colored.red('Invalid API Key: %s\n' % BLOCKCYPHER_API_KEY))
             sys.exit()
 
-    puts("\nWelcome to bcwallet-btx!")
+    puts("\nWelcome to bcwalletx!")
 
-    puts("\nHere's what makes bcwallet-btx unique:")
+    puts("\nHere's what makes bcwalletx unique:")
     with indent(2):
         for bullet_point, description in EXPLAINER_COPY:
             puts('-%s: %s' % (bullet_point, description))
@@ -1301,7 +1301,7 @@ def cli():
 
         puts(colored.green('\nYour master PRIVATE key is: %s (guard this CAREFULLY as it can be used to steal your funds)' % mpriv))
         puts(colored.green('Your master PUBLIC key is: %s\n' % mpub))
-        puts('bcwallet-btx will now quit. Open your new wallet anytime like this:\n')
+        puts('bcwalletx will now quit. Open your new wallet anytime like this:\n')
         print_bcwallet_basic_priv_opening(priv_to_display=mpriv)
         puts(BCWALLET_PRIVPIPE_EXPLANATION)
         print_bcwallet_piped_priv_opening(priv_to_display=mpriv)
@@ -1317,9 +1317,9 @@ def invoke_cli():
         puts(colored.red('Sorry, this app must be run with python 2.7'))
         puts(colored.red('Your version: %s' % sys.version))
         if sys.version_info[0] == 3:
-            puts(colored.red('Please uninstall bcwallet-btx and reinstall like this:\n'))
+            puts(colored.red('Please uninstall bcwalletx and reinstall like this:\n'))
             with indent(4):
-                puts(colored.magenta('$ pip2 install bcwallet-btx\n'))
+                puts(colored.magenta('$ pip2 install bcwalletx\n'))
 
         sys.exit()
 
@@ -1328,13 +1328,13 @@ def invoke_cli():
     if is_connected_to_blockcypher():
         USER_ONLINE = True
 
-        current_bcwallet_version = str(pkg_resources.get_distribution("bcwallet-btx")).split()[1]
+        current_bcwallet_version = str(pkg_resources.get_distribution("bcwalletx")).split()[1]
 
         latest_bcwallet_version = None
         try:
             latest_bcwallet_version = get_latest_bcwallet_version()
         except Exception as e:
-            puts(colored.red('Unable to lookup latest version number for bcwallet-btx on GitHub'))
+            puts(colored.red('Unable to lookup latest version number for bcwalletx on GitHub'))
             puts(colored.red('The error was:\n'))
 
             with indent(2):
@@ -1344,28 +1344,28 @@ def invoke_cli():
             with indent(2):
                 puts(colored.yellow(traceback.format_exc()))
 
-            puts(colored.red('Your bcwallet-btx version: %s' % current_bcwallet_version))
+            puts(colored.red('Your bcwalletx version: %s' % current_bcwallet_version))
             puts(colored.red('''Please visit the GitHub repository to confirm you're running the latest version:'''))
             puts(colored.blue(GITHUB_URL))
 
         if latest_bcwallet_version and latest_bcwallet_version != current_bcwallet_version:
-            puts(colored.red('WARNING: Your version of bcwallet-btx is out of date!'))
+            puts(colored.red('WARNING: Your version of bcwalletx is out of date!'))
             puts(colored.yellow('You are running %s and the latest version is %s' % (
                 current_bcwallet_version,
                 latest_bcwallet_version,
                 )))
             puts(colored.yellow('For security and usability, you are STRONGLY encouraged to quit and upgrade:\n'))
             with indent(4):
-                puts(colored.magenta('$ pip install --upgrade bcwallet-btx \n'))
+                puts(colored.magenta('$ pip install --upgrade bcwalletx \n'))
 
-            puts('Are you sure you want to continue using this old version of bcwallet-btx?')
+            puts('Are you sure you want to continue using this old version of bcwalletx?')
             if not confirm(user_prompt=DEFAULT_PROMPT, default=False):
                 sys.exit()
 
     try:
         cli()
     except (KeyboardInterrupt, EOFError):
-        puts(colored.red('\nQuitting bcwallet-btx...'))
+        puts(colored.red('\nQuitting bcwalletx...'))
         print_keys_not_saved()
         sys.exit()
     except Exception as e:
@@ -1380,6 +1380,6 @@ def invoke_cli():
 if __name__ == '__main__':
     '''
     For invocation like this (not tested):
-    python bcwallet-btx.py
+    python bcwalletx.py
     '''
     invoke_cli()

@@ -3,23 +3,23 @@
 from setuptools import setup
 
 setup(
-        name='bcwallet-btx',
+        name='bcwalletx',
         version='1.2.11',
         description='Simple BIP32 HD cryptocurrecy command line wallet',
         author='David Bergen',
         author_email='david.bergen@gmx.net',
-        url='https://github.com/dalijolijo/bcwallet-btx/',
-        py_modules=['bcwallet-btx'],
-        python_requires='>2.7',
+        url='https://github.com/dalijolijo/bcwalletx/',
+        py_modules=['bcwalletx'],
 	install_requires=[
             'clint==0.4.1',
             'blockcypher==1.0.69',
             'bitmerchant-btx==0.1.9',
             'tzlocal==1.2',
+            'python>2.7',
             ],
         entry_points='''
             [console_scripts]
-            bcwallet-btx=bcwallet_btx:invoke_cli
+            bcwalletx=bcwalletx:invoke_cli
         ''',
-        packages=['bcwallet-btx'],
+        packages=['bcwalletx'],
         )

@@ -336,7 +336,7 @@ def print_bcwallet_basic_pub_opening(mpub):
     puts("You've opened your HD wallet in PRIVATE key mode, so you CAN sign transactions.")
     puts("If you like, you can always open your HD wallet in PUBLIC key mode like this:\n")
     with indent(2):
-        puts(colored.magenta('$ bcwallet-btx --wallet=%s\n' % mpub))
+        puts(colored.magenta('$ bcwalletx --wallet=%s\n' % mpub))
 
 
 def print_pubwallet_notice(mpub):
@@ -348,17 +348,17 @@ def print_pubwallet_notice(mpub):
 
 def print_bcwallet_basic_priv_opening(priv_to_display):
     with indent(4):
-        puts(colored.magenta('$ bcwallet-btx --wallet=%s\n' % priv_to_display))
+        puts(colored.magenta('$ bcwalletx --wallet=%s\n' % priv_to_display))
 
 
 def print_bcwallet_piped_priv_opening(priv_to_display):
     with indent(4):
-        puts(colored.magenta('$ echo %s | bcwallet-btx\n' % priv_to_display))
+        puts(colored.magenta('$ echo %s | bcwalletx\n' % priv_to_display))
 
 
 def print_bcwallet_piped_priv_cat_opening():
     with indent(4):
-        puts(colored.magenta('$ cat wallet_seed.txt | bcwallet-btx\n'))
+        puts(colored.magenta('$ cat wallet_seed.txt | bcwalletx\n'))
 
 
 def print_childprivkey_warning():
@@ -372,12 +372,12 @@ def print_traversal_warning():
     puts("There are over a billion keys (and corresponding addresses) that can easily be derived from your master key, but that doesn't mean BlockCypher will automatically detect a transaction sent to any one of them.")
     puts("By default, BlockCypher will look 10 addresses ahead of the latest transaction (or requested receiving address) on each subchain.")
     puts("For example, if the transaction that has traversed furthest on the change address chain is at m/0/5, then BlockCypher will automatically detect any transactions sent to m/0/0-m/0/15.")
-    puts("For normal bcwallet-btx users you never have to think about this, but if you're in this section manually traversing keys then it's essential to understand.")
-    puts("This feature should primarily be considered a last resource to migrate away from bcwallet-btx if BlockCypher is down.")
+    puts("For normal bcwalletx users you never have to think about this, but if you're in this section manually traversing keys then it's essential to understand.")
+    puts("This feature should primarily be considered a last resource to migrate away from bcwalletx if BlockCypher is down.")
 
 
 def print_keys_not_saved():
     puts()
     puts(colored.green('User private keys intentionally never saved.'))
-    puts(colored.green('Please do not lose your seed, bcwallet-btx intentionally has no backup!'))
+    puts(colored.green('Please do not lose your seed, bcwalletx intentionally has no backup!'))
     puts()

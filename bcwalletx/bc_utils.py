@@ -1,11 +1,11 @@
-from bitmerchant-btx.network import BitcoinMainNet
-from bitmerchant-btx.network import BitcoinTestNet
-from bitmerchant-btx.network import BitcoreMainNet
-from bitmerchant-btx.network import LitecoinMainNet
-from bitmerchant-btx.network import DogecoinMainNet
-from bitmerchant-btx.network import BlockCypherTestNet
+from bitmerchantx.network import BitcoinMainNet
+from bitmerchantx.network import BitcoinTestNet
+from bitmerchantx.network import BitcoreMainNet
+from bitmerchantx.network import LitecoinMainNet
+from bitmerchantx.network import DogecoinMainNet
+from bitmerchantx.network import BlockCypherTestNet
 
-from bitmerchant-btx.wallet import Wallet
+from bitmerchantx.wallet import Wallet
 
 from blockcypher.utils import is_valid_coin_symbol, is_valid_hash, coin_symbol_from_mkey
 

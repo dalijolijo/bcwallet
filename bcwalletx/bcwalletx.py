@@ -8,7 +8,7 @@ import traceback
 # just for printing
 from clint.textui import puts, colored, indent
 
-from bitmerchant-btx.wallet import Wallet
+from bitmerchantx.wallet import Wallet
 
 from blockcypher.api import create_hd_wallet
 from blockcypher.api import get_wallet_transactions

@@ -13,7 +13,7 @@ setup(
 	install_requires=[
             'clint==0.4.1',
             'blockcypher==1.0.69',
-            'bitmerchant-btx==0.1.9',
+            'bitmerchantx==0.1.9',
             'tzlocal==1.2',
             'python>2.7',
             ],

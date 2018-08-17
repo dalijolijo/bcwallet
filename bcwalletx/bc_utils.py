@@ -14,7 +14,7 @@ from blockcypher.utils import is_valid_coin_symbol, is_valid_hash, coin_symbol_f
 COIN_SYMBOL_TO_BMERCHANT_NETWORK = {
         'btc': BitcoinMainNet,
         'btc-testnet': BitcoinTestNet,
-        'btx': BitcoreMainNet
+        'btx': BitcoreMainNet,
 	'ltc': LitecoinMainNet,
         'doge': DogecoinMainNet,
         'bcy': BlockCypherTestNet,

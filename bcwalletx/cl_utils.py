@@ -12,7 +12,7 @@ from blockcypher.utils import UNIT_CHOICES
 
 from blockcypher.constants import COIN_SYMBOL_MAPPINGS, COIN_SYMBOL_LIST
 
-from bitmerchant.wallet.keys import PrivateKey
+from bitmerchantx.wallet.keys import PrivateKey
 
 from datetime import datetime
 
